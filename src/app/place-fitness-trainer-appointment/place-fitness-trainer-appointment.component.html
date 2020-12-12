@@ -1,0 +1,222 @@
+
+    <form [formGroup]="fitnessForm" (ngSubmit)="onSubmit()" #f>
+        <div class="form-group row">
+        <div class="col-xl-4 ml-2">
+        <label for="exampleInputfirstname">First Name</label>
+        <input type="text" class="form-control " formControlName="firstname" placeholder="First Name" ngModel>
+        <small class="form-text text-muted"
+            *ngIf= "fitnessForm.controls.firstname.touched && fitnessForm.controls.firstname.errors?.required">
+            Please enter firstname!
+        </small>
+        </div>
+        <div class="col-xl-5 ml-1">
+        <label for="exampleInputlasttname">Last Name</label>
+        <input type="text" class="form-control " formControlName="lastname" placeholder="Last Name">
+        <small class="form-text text-muted"
+            *ngIf= "fitnessForm.controls.lastname.touched && fitnessForm.controls.lastname.errors?.required">
+            Please enter lasstname!
+        </small>
+        </div>
+        </div>
+
+
+
+        <div class="form-group row">
+        <div class="col-xl-9 ml-2">
+            <label for="saddress" >Shipping Address</label>
+            <input type="text" class="form-control" formControlName="saddress" placeholder="Street Address">
+            <label for="saddress" >Street Address</label>
+        </div>
+        </div>
+
+        <div class="form-group row">
+                <div class="col-xl-4 ml-2">
+                <input type="text" class="form-control " formControlName="city" placeholder="City" >
+                <small class="form-text text-muted"
+                *ngIf= "fitnessForm.controls.city.touched && fitnessForm.controls.city.errors?.required">
+                Please enter city!
+            </small>
+                <label for="exampleInputCity">City</label>
+                </div>
+                <div class="col-xl-5 ml-2">
+                    
+                <input type="text" class="form-control " formControlName="state" placeholder="State">
+                <small class="form-text text-muted"
+                    *ngIf= "fitnessForm.controls.state.touched && fitnessForm.controls.state.errors?.required">
+                    Please enter state!
+                </small>
+                <label for="exampleInputState">State</label>
+                </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-xl-4 ml-2">
+            <input type="text" class="form-control " formControlName="country" placeholder="Country">
+            <small class="form-text text-muted"
+                    *ngIf= "fitnessForm.controls.country.touched && fitnessForm.controls.country.errors?.required">
+                    Please enter country!
+                </small>
+            <label for="exampleCountry">Country</label>
+            </div>
+            <div class="col-xl-5 ml-2">
+            <input type="text" class="form-control " formControlName="pin" placeholder="Pincode">
+            <small class="form-text text-muted"
+                    *ngIf= "fitnessForm.controls.pin.touched && fitnessForm.controls.pin.errors?.required">
+                    Please  enter 6 digit pincode only
+                </small>
+            <label for="examplepincode">Pincode</label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xl-1 ml-2">
+                <label for="Buyersname">Buyers Name</label>
+            </div>
+            <div class="col-xl-4 ml-2">
+            <input type="text" class="form-control " formControlName="bfirstname" placeholder="First" >
+            <label for="BuyInputfirstname">First Name</label>
+            </div>
+            <div class="col-xl-4 ml-2">
+            <input type="text" class="form-control " formControlName="blastname" placeholder="Last">
+            <label for="BuyInputlasttname">Last Name</label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xl-1 ml-2">
+                <label for="examplemobile">Mobile Number</label>
+            </div>
+            <div class="col-xl-8 ml-2">
+            <input type="text" class="form-control " formControlName="Mobile" placeholder="(0123-456-789)" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xl-2 ml-2">
+                <label for="exampleEmail">Email-ID</label>
+            </div>
+            <div class="col-xl-4 ml-2">
+            <input type="text" class="form-control " formControlName="email" placeholder="Email" >
+            <small class="form-text text-muted"
+                    *ngIf= "fitnessForm.controls.email.touched && fitnessForm.controls.email.errors?.email">
+                    Please enter valid email!
+                </small>
+            </div>
+            <div class="col-xl-1 ml-2">
+                <label for="exampleage">Age</label>
+            </div>
+            <div class="col-xl-2 ml-2">
+            <input type="text" class="form-control " formControlName="age" placeholder="Age" >
+            </div>
+        </div>
+
+        <div class=" form-group row ">
+            <div class="col-xl-2 ml-1">
+                <label for="exampletrainer">Trainer Choice</label>
+            </div>
+        </div>
+            
+
+        <div class="form-group row">
+            <div class="col-xl-1 ml-2">
+                <label for="examplemale">Male</label>
+            </div> 
+            <div class="col-xs-1 ml-2">
+            <input type="radio" class="form-control "formControlName="pchoice" name="pchoice" value="Male">
+            </div>
+            <div class="col-xl-1 ml-2">
+                <label for="examplefemale">Female</label>
+            </div> 
+            <div class="col-xs-1 ml-2">
+            <input type="radio" class="form-control "formControlName="pchoice" name="pchoice" value="Female">
+            </div>
+            <div class="col-xl-1 ml-2">
+                <label for="exampleno">No Choice</label>
+            </div> 
+            <div class="col-xs-1 ml-2">
+            <input type="radio" class="form-control " formControlName="pchoice" name="pchoice" value="No">
+            </div>   
+        </div>
+
+        <div class=" form-group row ">
+            <div class="col-xl-3 ml-1">
+                <label for="examplephysio">Do you want a PhysioTherapist</label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xl-1 ml-2">
+                <label for="exampleyesphy">Yes</label>
+            </div> 
+            <div class="col-xs-1 ml-2">
+            <input type="radio" class="form-control" formControlName="choice" name="phy" value="yes">
+            </div>
+            <div class="col-xl-1 ml-2">
+                <label for="examplenophy">No</label>
+            </div> 
+            <div class="col-xs-1 ml-2">
+            <input type="radio" class="form-control" formControlName="choice" name="phy" value="no">
+            </div>
+        </div>
+
+        <div class=" form-group row ">
+            <div class="col-xl-3 ml-1">
+                <label for="examplepkg">Select a Package</label>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xl-1 ml-2">
+                <input type="radio" class="form-control" formControlName="sess" name="sess" value="one" >
+                </div>
+            <div class="col-xl-6 ml-2">
+                <label for="exampleInputfirstname">One time Assesment Only(rs 500)</label>
+            </div> 
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xl-1 ml-2">
+                <input type="radio" class="form-control" formControlName="sess" name="sess" value="four">
+                </div>
+            <div class="col-xl-6 ml-2">
+                <label for="exampleInputfirstname">4 sessions Per Week(400 per session)</label>
+            </div> 
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xl-1 ml-2">
+                <input type="radio" class="form-control" formControlName="sess"  name="sess" value="five" >
+                </div>
+            <div class="col-xl-6 ml-2">
+                <label for="exampleInputfirstname">5 sessions Per Week(300 per session)</label>
+            </div> 
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xl-1 ml-2">
+                <input type="radio" class="form-control" formControlName="sess" name="sess" value="other" >
+                </div>
+            <div class="col-xs-3 ml-3">
+                <label for="exampleInputfirstname">Other</label>
+            </div> 
+            <div class="col-xl-3 ml-4">
+                <input type="text" class="form-control" formControlName="otheramt" placeholder="other">   
+            </div> 
+        </div>
+        <div class="form-group row">
+            <div class="col-xl-1 ml-2">
+                <label for="exampleInputfirstname">Amount</label>
+            </div>
+            <div class="col-xl-4 ml-2" >
+            <input type="text" class="form-control " formControlName="rupees" placeholder="500" *ngIf="f.sess.value==='one'" value="500" >
+            <input type="text" class="form-control " formControlName="rupees" placeholder="1600" *ngIf="f.sess.value==='four'" value="1600" >
+            <input type="text" class="form-control " formControlName="rupees" placeholder="1500" *ngIf="f.sess.value==='five'" value="1500" >
+            <input type="text" class="form-control " formControlName="rupees" placeholder="other" *ngIf="f.sess.value==='other'" value="f.otheramt.value" >
+            </div>
+            <div class="col-xl-4 ml-2">
+            <input type="text" class="form-control " formControlName="paise" placeholder="Paise">
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">
+            Submit Form 
+        </button>
+    </form>

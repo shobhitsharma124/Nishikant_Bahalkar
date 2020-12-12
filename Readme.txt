@@ -1,0 +1,1 @@
+Note:- Run application with "npm run ng serve"

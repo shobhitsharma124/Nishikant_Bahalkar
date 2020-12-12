@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <h2>Appointment Details Chart</h2>
+    <form class="form-inline" [formGroup]="search" (ngSubmit)="onSearch()">
+        <input  type="search" placeholder="Enter M or F or N" aria-label="Search"  class="form-control" formControlName="value">
+        <button type="button" class="btn btn-danger btn-lg" type="submit" click="onSearch()">Search</button>
+      </form>
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Name</th>
+                <th>Last Name</th>
+                <th>City</th>
+                <th>Package</th>
+                <th>Trainer Preference</th>
+                <th>Phone</th>
+            </tr>
+        </thead> 
+        <tbody  > 
+            <tr mdbTableCol *ngFor="let ap of app1; let i=index" >
+                <td>{{i+1}}</td>
+                <td>{{ ap.firstname}} </td>
+                <td>{{ ap.lastname}} </td>
+                <td>{{ ap.city}} </td>
+                <td>{{ ap.sess}} </td>
+                <td>{{ ap.pchoice}} </td>
+                <td>{{ ap.Mobile}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
